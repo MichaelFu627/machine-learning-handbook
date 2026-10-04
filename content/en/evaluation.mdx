@@ -1,0 +1,17 @@
+## The idea
+
+Training data fits parameters. Validation data helps choose models and hyperparameters. A final test set estimates performance after those choices. Fit preprocessing only on training data and apply the fitted transformation to the other splits.
+
+## The mathematics
+
+$$
+\mathrm{Precision}=\frac{TP}{TP+FP},\quad\mathrm{Recall}=\frac{TP}{TP+FN}
+$$
+
+## Try this experiment
+
+In the classifier laboratories, the held-out score updates as you tune. Treat it as a validation score, even if a library convention calls the split test. A real final test set must stay untouched during this exploration.
+
+## Know the limits
+
+Accuracy can hide rare-class failure. Compare precision and recall when mistakes have different costs. Split groups together and use chronological splits for time-dependent data. Repeated validation tuning can also overfit.

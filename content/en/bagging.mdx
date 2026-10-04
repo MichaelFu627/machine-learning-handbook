@@ -1,0 +1,17 @@
+## The idea
+
+Each base learner sees a sample drawn with replacement from the training set. In this implementation the tree probabilities are averaged, then the most probable class is selected. Averaging helps most when individual predictions are variable and not perfectly correlated.
+
+## The mathematics
+
+$$
+\operatorname{Var}(\bar h)=\rho\sigma^2+\frac{1-\rho}{T}\sigma^2
+$$
+
+## Try this experiment
+
+Compare one learner with many while holding data, seed and tree depth fixed. Repeat the experiment under different seeds. More trees do not guarantee a better validation score in every run.
+
+## Know the limits
+
+The variance formula assumes numerical predictions with equal variance and pairwise correlation. It is not a general formula for hard class labels. A visually smoother contour is not proof of lower variance.

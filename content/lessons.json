@@ -1,0 +1,551 @@
+[
+  {
+    "slug": "foundations",
+    "group": "foundations",
+    "minutes": 12,
+    "level": "beginner",
+    "number": 1,
+    "title": {
+      "en": "Learning from uncertainty",
+      "zh-CN": "从不确定性中学习"
+    },
+    "description": {
+      "en": "Probability, samples, and the difference between a population and an estimate.",
+      "zh-CN": "概率、样本，以及总体与估计之间的区别。"
+    },
+    "question": {
+      "en": "What changes when we repeat an experiment?",
+      "zh-CN": "重复实验时，究竟什么会变化？"
+    },
+    "prerequisites": [],
+    "quiz": {
+      "question": {
+        "en": "Does increasing sample size automatically remove selection bias?",
+        "zh-CN": "增加样本量会自动消除选择偏差吗？"
+      },
+      "options": {
+        "en": ["Yes", "No"],
+        "zh-CN": ["会", "不会"]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Sample size reduces random variation under appropriate sampling, not systematic selection bias.",
+        "zh-CN": "合理抽样下，增加样本量能减少随机波动，但不能消除系统性的选择偏差。"
+      }
+    },
+    "label": {
+      "en": "Probability & samples",
+      "zh-CN": "概率与样本"
+    }
+  },
+  {
+    "slug": "linear-regression",
+    "group": "regression",
+    "minutes": 18,
+    "level": "beginner",
+    "number": 2,
+    "title": {
+      "en": "A line that learns",
+      "zh-CN": "让直线从数据中学习"
+    },
+    "description": {
+      "en": "Move the data. Watch the residuals. Discover least squares.",
+      "zh-CN": "移动数据点，观察残差，理解最小二乘。"
+    },
+    "question": {
+      "en": "How do we choose one line among infinitely many?",
+      "zh-CN": "无穷多条直线中，应该选择哪一条？"
+    },
+    "prerequisites": ["foundations"],
+    "quiz": {
+      "question": {
+        "en": "If we double every residual, what happens to RSS?",
+        "zh-CN": "每个残差都变成两倍时，RSS 如何变化？"
+      },
+      "options": {
+        "en": ["Doubles", "Quadruples", "Stays unchanged"],
+        "zh-CN": ["变成两倍", "变成四倍", "保持不变"]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Each squared residual is multiplied by four.",
+        "zh-CN": "每个残差平方都会乘以四。"
+      }
+    },
+    "label": {
+      "en": "Linear regression · OLS",
+      "zh-CN": "线性回归 · OLS"
+    }
+  },
+  {
+    "slug": "gradient-descent",
+    "group": "optimization",
+    "minutes": 15,
+    "level": "beginner",
+    "number": 3,
+    "title": {
+      "en": "Small steps, better answers",
+      "zh-CN": "迈出小步，接近最优解"
+    },
+    "description": {
+      "en": "Follow a gradient across a loss landscape, one step at a time.",
+      "zh-CN": "沿着损失曲面的梯度，一步一步寻找最优解。"
+    },
+    "question": {
+      "en": "How can a local direction lead us toward a minimum?",
+      "zh-CN": "局部方向如何引导我们接近最小值？"
+    },
+    "prerequisites": ["linear-regression"],
+    "quiz": {
+      "question": {
+        "en": "Does a larger learning rate always mean faster convergence?",
+        "zh-CN": "学习率越大一定收敛越快吗？"
+      },
+      "options": {
+        "en": ["Yes", "No"],
+        "zh-CN": ["是", "否"]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "A large step can overshoot or diverge.",
+        "zh-CN": "步长过大会越过最优点，甚至发散。"
+      }
+    },
+    "label": {
+      "en": "Gradient descent",
+      "zh-CN": "梯度下降"
+    }
+  },
+  {
+    "slug": "regularization",
+    "group": "regression",
+    "minutes": 20,
+    "level": "intermediate",
+    "number": 4,
+    "title": {
+      "en": "Less freedom, better predictions",
+      "zh-CN": "约束模型，改善预测"
+    },
+    "description": {
+      "en": "Compare L1 and L2 penalties on the same standardized data.",
+      "zh-CN": "在同一组标准化数据上比较 L1 与 L2 惩罚。"
+    },
+    "question": {
+      "en": "When is a little bias worth accepting?",
+      "zh-CN": "什么时候值得接受一点偏差？"
+    },
+    "prerequisites": ["linear-regression", "gradient-descent"],
+    "quiz": {
+      "question": {
+        "en": "Which penalty can produce exact zeros?",
+        "zh-CN": "哪种惩罚可以产生精确的零系数？"
+      },
+      "options": {
+        "en": ["L1 / Lasso", "Only L2 / Ridge"],
+        "zh-CN": ["L1 / Lasso", "仅 L2 / Ridge"]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The corner geometry of L1 permits sparse optima.",
+        "zh-CN": "L1 约束的尖角几何允许稀疏最优解。"
+      }
+    },
+    "label": {
+      "en": "Ridge & Lasso",
+      "zh-CN": "Ridge 与 Lasso"
+    }
+  },
+  {
+    "slug": "evaluation",
+    "group": "foundations",
+    "minutes": 14,
+    "level": "beginner",
+    "number": 5,
+    "title": {
+      "en": "Measure what matters",
+      "zh-CN": "衡量真正重要的表现"
+    },
+    "description": {
+      "en": "Separate learning, tuning, and the final evaluation.",
+      "zh-CN": "区分训练、调参和最终评估。"
+    },
+    "question": {
+      "en": "How do we know a model works on new observations?",
+      "zh-CN": "怎样知道模型能处理新的观测？"
+    },
+    "prerequisites": ["linear-regression"],
+    "quiz": {
+      "question": {
+        "en": "Where should a scaler learn its mean and variance?",
+        "zh-CN": "标准化器应在哪个数据集学习均值和方差？"
+      },
+      "options": {
+        "en": ["All data before splitting", "Training data only"],
+        "zh-CN": ["划分前的全部数据", "仅训练数据"]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Fitting on held-out data leaks information into training.",
+        "zh-CN": "在留出数据上拟合会将信息泄漏到训练过程。"
+      }
+    },
+    "label": {
+      "en": "Model evaluation",
+      "zh-CN": "模型评价"
+    }
+  },
+  {
+    "slug": "logistic-regression",
+    "group": "classification",
+    "minutes": 20,
+    "level": "beginner",
+    "number": 6,
+    "title": {
+      "en": "From a score to a probability",
+      "zh-CN": "从得分到概率"
+    },
+    "description": {
+      "en": "Explore a linear boundary, then change the decision threshold.",
+      "zh-CN": "探索线性边界，再改变分类阈值。"
+    },
+    "question": {
+      "en": "How can a linear model predict a probability?",
+      "zh-CN": "线性模型怎样预测概率？"
+    },
+    "prerequisites": ["gradient-descent", "evaluation"],
+    "quiz": {
+      "question": {
+        "en": "Lowering the positive-class threshold usually does what?",
+        "zh-CN": "降低正类阈值通常会怎样？"
+      },
+      "options": {
+        "en": ["Predicts fewer positives", "Predicts more positives"],
+        "zh-CN": ["预测更少正类", "预测更多正类"]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "More observations exceed the lower threshold; recall cannot decrease on a fixed dataset.",
+        "zh-CN": "更多观测超过较低阈值；固定数据上的召回率不会下降。"
+      }
+    },
+    "label": {
+      "en": "Logistic regression",
+      "zh-CN": "逻辑回归"
+    }
+  },
+  {
+    "slug": "naive-bayes",
+    "group": "classification",
+    "minutes": 16,
+    "level": "beginner",
+    "number": 7,
+    "title": {
+      "en": "A classifier built from belief",
+      "zh-CN": "从概率假设构建分类器"
+    },
+    "description": {
+      "en": "Combine a class prior with feature likelihoods.",
+      "zh-CN": "把类别先验与特征似然结合起来。"
+    },
+    "question": {
+      "en": "Can simple distributional assumptions produce useful predictions?",
+      "zh-CN": "简单的分布假设能产生有用的预测吗？"
+    },
+    "prerequisites": ["foundations", "evaluation"],
+    "quiz": {
+      "question": {
+        "en": "The independence assumption is conditional on what?",
+        "zh-CN": "独立假设是以什么为条件？"
+      },
+      "options": {
+        "en": ["The class label", "The sample size"],
+        "zh-CN": ["类别标签", "样本数量"]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "We assume independence among features after conditioning on the class.",
+        "zh-CN": "给定类别之后，才假设特征相互独立。"
+      }
+    },
+    "label": {
+      "en": "Naive Bayes",
+      "zh-CN": "朴素贝叶斯"
+    }
+  },
+  {
+    "slug": "svm",
+    "group": "classification",
+    "minutes": 25,
+    "level": "intermediate",
+    "number": 8,
+    "title": {
+      "en": "Make room for a margin",
+      "zh-CN": "为分类留出间隔"
+    },
+    "description": {
+      "en": "Explore support vectors and nonlinear kernel boundaries.",
+      "zh-CN": "探索支持向量与非线性核边界。"
+    },
+    "question": {
+      "en": "Which observations actually determine the boundary?",
+      "zh-CN": "哪些观测真正决定边界？"
+    },
+    "prerequisites": ["logistic-regression", "regularization"],
+    "quiz": {
+      "question": {
+        "en": "What does increasing C do?",
+        "zh-CN": "增大 C 会怎样？"
+      },
+      "options": {
+        "en": [
+          "Penalizes margin violations more",
+          "Always increases the margin"
+        ],
+        "zh-CN": ["更强地惩罚间隔违例", "一定增大间隔"]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "C weights violations in the soft-margin objective.",
+        "zh-CN": "C 控制软间隔目标中违例的权重。"
+      }
+    },
+    "label": {
+      "en": "Support vector machines",
+      "zh-CN": "支持向量机"
+    }
+  },
+  {
+    "slug": "decision-trees",
+    "group": "classification",
+    "minutes": 18,
+    "level": "beginner",
+    "number": 9,
+    "title": {
+      "en": "One question at a time",
+      "zh-CN": "一次提出一个问题"
+    },
+    "description": {
+      "en": "Partition a feature space with simple threshold questions.",
+      "zh-CN": "用简单阈值问题逐步划分特征空间。"
+    },
+    "question": {
+      "en": "How can a sequence of simple rules describe a complex boundary?",
+      "zh-CN": "一系列简单规则如何描述复杂边界？"
+    },
+    "prerequisites": ["evaluation"],
+    "quiz": {
+      "question": {
+        "en": "Which score should guide depth selection here?",
+        "zh-CN": "这里选择深度主要应参考哪个分数？"
+      },
+      "options": {
+        "en": ["Training accuracy alone", "Held-out validation performance"],
+        "zh-CN": ["仅训练准确率", "留出验证表现"]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Training accuracy generally improves with complexity even when generalization does not.",
+        "zh-CN": "复杂度增加通常改善训练准确率，却未必改善泛化。"
+      }
+    },
+    "label": {
+      "en": "Decision trees",
+      "zh-CN": "决策树"
+    }
+  },
+  {
+    "slug": "bagging",
+    "group": "ensembles",
+    "minutes": 18,
+    "level": "intermediate",
+    "number": 10,
+    "title": {
+      "en": "Many views of the same data",
+      "zh-CN": "从多份样本中汇集预测"
+    },
+    "description": {
+      "en": "Bootstrap training samples, then aggregate the predictions.",
+      "zh-CN": "对训练样本进行 Bootstrap，再聚合预测。"
+    },
+    "question": {
+      "en": "Can averaging make an unstable learner more stable?",
+      "zh-CN": "平均能让不稳定的学习器更稳定吗？"
+    },
+    "prerequisites": ["decision-trees"],
+    "quiz": {
+      "question": {
+        "en": "Bootstrap sampling is performed…",
+        "zh-CN": "Bootstrap 抽样是……"
+      },
+      "options": {
+        "en": ["With replacement", "Without replacement"],
+        "zh-CN": ["有放回抽样", "无放回抽样"]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "A training observation can appear more than once in a bootstrap sample.",
+        "zh-CN": "一个训练观测可以在一份 Bootstrap 样本中出现多次。"
+      }
+    },
+    "label": {
+      "en": "Bagging",
+      "zh-CN": "Bagging"
+    }
+  },
+  {
+    "slug": "random-forests",
+    "group": "ensembles",
+    "minutes": 18,
+    "level": "intermediate",
+    "number": 11,
+    "title": {
+      "en": "Different trees, shared decisions",
+      "zh-CN": "不同的树，共同的决策"
+    },
+    "description": {
+      "en": "Add feature randomness to a bag of decision trees.",
+      "zh-CN": "在树的 Bagging 中加入特征随机性。"
+    },
+    "question": {
+      "en": "How can we make trees less alike?",
+      "zh-CN": "怎样让各棵树更不相同？"
+    },
+    "prerequisites": ["bagging"],
+    "quiz": {
+      "question": {
+        "en": "Feature subsampling primarily tries to reduce…",
+        "zh-CN": "特征子采样主要试图降低……"
+      },
+      "options": {
+        "en": ["Correlation between trees", "The number of labels"],
+        "zh-CN": ["树之间的相关性", "标签数量"]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "Different candidate features encourage different tree structures.",
+        "zh-CN": "不同候选特征鼓励生成不同的树结构。"
+      }
+    },
+    "label": {
+      "en": "Random forests",
+      "zh-CN": "随机森林"
+    }
+  },
+  {
+    "slug": "k-means",
+    "group": "unsupervised",
+    "minutes": 18,
+    "level": "beginner",
+    "number": 12,
+    "title": {
+      "en": "Let the groups emerge",
+      "zh-CN": "让分组自然浮现"
+    },
+    "description": {
+      "en": "Alternate between assigning points and moving their centers.",
+      "zh-CN": "交替进行样本分配与中心更新。"
+    },
+    "question": {
+      "en": "What does it mean for points to belong together?",
+      "zh-CN": "怎样判断哪些点应该归为一组？"
+    },
+    "prerequisites": ["foundations"],
+    "quiz": {
+      "question": {
+        "en": "With assignments fixed, where should a center move?",
+        "zh-CN": "固定分配时，中心应移动到哪里？"
+      },
+      "options": {
+        "en": ["The group mean", "The farthest point"],
+        "zh-CN": ["该组的均值", "最远的点"]
+      },
+      "answer": 0,
+      "explanation": {
+        "en": "The mean minimizes the sum of squared Euclidean distances.",
+        "zh-CN": "均值最小化欧氏距离平方和。"
+      }
+    },
+    "label": {
+      "en": "K-means clustering",
+      "zh-CN": "K-means 聚类"
+    }
+  },
+  {
+    "slug": "expectation-maximization",
+    "group": "inference",
+    "minutes": 25,
+    "level": "advanced",
+    "number": 13,
+    "title": {
+      "en": "Learn with missing labels",
+      "zh-CN": "在隐变量未知时学习"
+    },
+    "description": {
+      "en": "Soft assignments and weighted updates in a Gaussian mixture.",
+      "zh-CN": "高斯混合中的软分配与加权更新。"
+    },
+    "question": {
+      "en": "How can we fit a mixture when component labels are hidden?",
+      "zh-CN": "分量标签未知时，怎样拟合混合模型？"
+    },
+    "prerequisites": ["k-means", "naive-bayes"],
+    "quiz": {
+      "question": {
+        "en": "Does EM always find the global optimum?",
+        "zh-CN": "EM 总能找到全局最优吗？"
+      },
+      "options": {
+        "en": ["Yes", "No"],
+        "zh-CN": ["是", "否"]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Different initializations can converge to different stationary solutions.",
+        "zh-CN": "不同初始化可能收敛到不同的驻点解。"
+      }
+    },
+    "label": {
+      "en": "Expectation-maximization",
+      "zh-CN": "EM 算法"
+    }
+  },
+  {
+    "slug": "mcmc",
+    "group": "inference",
+    "minutes": 25,
+    "level": "advanced",
+    "number": 14,
+    "title": {
+      "en": "A random walk with a purpose",
+      "zh-CN": "有目标的随机游走"
+    },
+    "description": {
+      "en": "Propose, accept or stay. Then diagnose the resulting chain.",
+      "zh-CN": "提出候选、接受或停留，再诊断这条链。"
+    },
+    "question": {
+      "en": "How can local moves explore a distribution?",
+      "zh-CN": "局部移动怎样探索整个分布？"
+    },
+    "prerequisites": ["foundations", "expectation-maximization"],
+    "quiz": {
+      "question": {
+        "en": "When a proposal is rejected, what enters the chain?",
+        "zh-CN": "候选被拒绝时，链中记录什么？"
+      },
+      "options": {
+        "en": ["Nothing", "The current state again"],
+        "zh-CN": ["不记录任何值", "再次记录当前状态"]
+      },
+      "answer": 1,
+      "explanation": {
+        "en": "Repeated states are part of the correct Markov chain.",
+        "zh-CN": "重复状态是正确马尔可夫链的一部分。"
+      }
+    },
+    "label": {
+      "en": "MCMC sampling",
+      "zh-CN": "MCMC 采样"
+    }
+  }
+]

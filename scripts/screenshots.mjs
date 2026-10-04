@@ -1,0 +1,13 @@
+import { chromium } from "playwright";
+import { mkdir } from "node:fs/promises";
+await mkdir("artifacts", { recursive: true });
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1440, height: 1100 } });
+await page.goto("http://127.0.0.1:3000/en");
+await page.screenshot({ path: "artifacts/home-desktop.png", fullPage: true });
+await page.goto("http://127.0.0.1:3000/en/learn/linear-regression");
+await page.screenshot({ path: "artifacts/ols-desktop.png", fullPage: true });
+await page.setViewportSize({ width: 390, height: 844 });
+await page.goto("http://127.0.0.1:3000/zh-CN/learn/linear-regression");
+await page.screenshot({ path: "artifacts/ols-mobile.png", fullPage: true });
+await browser.close();

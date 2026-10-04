@@ -1,0 +1,17 @@
+## The idea
+
+Each point leaves a vertical residual: observed y minus predicted y. Least squares chooses the intercept and slope that minimize the sum of squared residuals. Squaring prevents positive and negative errors from cancelling and gives large errors more influence.
+
+## The mathematics
+
+$$
+\hat\beta=\arg\min_\beta\sum_i(y_i-\beta_0-\beta_1x_i)^2
+$$
+
+## Try this experiment
+
+Drag one observation far above the others. Before releasing it, predict the direction in which the line will rotate. Then increase noise while keeping the seed fixed: the same underlying random draws are reused.
+
+## Know the limits
+
+OLS minimizes vertical residuals, not perpendicular distances in the drawing. Normality is not required to compute OLS. Independent Gaussian errors with constant variance make the coefficient MLE coincide with OLS. Training fit does not measure generalization.

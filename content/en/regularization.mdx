@@ -1,0 +1,17 @@
+## The idea
+
+Regularization trades some training fit for constrained coefficients. Ridge shrinks smoothly. Lasso can make a coefficient exactly zero. Feature scaling matters because the penalty acts on coefficient size.
+
+## The mathematics
+
+$$
+\min_w\frac{1}{2n}\|y-Xw\|^2+\lambda R(w),\quad R_1=\|w\|_1,\ R_2=\|w\|_2^2
+$$
+
+## Try this experiment
+
+Increase λ and follow both coefficient paths. Both methods use the displayed normalized objective. The same numerical λ does not imply that L1 and L2 impose equivalent constraints.
+
+## Know the limits
+
+Choose λ using validation data or cross-validation; do not select it on the final test set. A zero Lasso coefficient is not evidence of no causal effect. For sklearn Ridge this convention uses alpha=2nλ; Lasso uses alpha=λ.

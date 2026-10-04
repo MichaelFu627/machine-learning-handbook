@@ -1,0 +1,17 @@
+## The idea
+
+The gradient points toward the steepest local increase. Subtract it to move downhill. The learning rate controls the distance of each move. This quadratic is a small optimization laboratory rather than a fitted regression model.
+
+## The mathematics
+
+$$
+\theta_{t+1}=\theta_t-\eta\nabla J(\theta_t),\quad J(x,y)=x^2+2y^2
+$$
+
+## Try this experiment
+
+Play with rates 0.1, 0.3, and 0.55. Use the single-step control to compare stable descent, alternating coordinates, and divergence. The warning is computed from the actual update rule.
+
+## Know the limits
+
+For this quadratic the update factors are 1−2η and 1−4η. Both must have magnitude below one for convergence from arbitrary starting points: $0<\eta<0.5$. Other functions have other limits.

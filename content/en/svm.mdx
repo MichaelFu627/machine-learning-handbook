@@ -1,0 +1,17 @@
+## The idea
+
+SVM balances a large margin against margin violations. Support vectors influence the fitted boundary. Kernels evaluate inner products in a feature space without explicitly constructing all its coordinates. The laboratory standardizes inputs using training data only.
+
+## The mathematics
+
+$$
+\min_{w,b,\xi}\frac12\|w\|^2+C\sum_i\xi_i,\quad y_i(w^T\phi(x_i)+b)\ge1-\xi_i
+$$
+
+## Try this experiment
+
+Compare a linear kernel with RBF on circles. Increase gamma to make an RBF response more local. Increase C to penalize margin violations more strongly, then compare validation accuracy.
+
+## Know the limits
+
+Large C does not make inseparable data separable. Decision values are scores, not calibrated probabilities or automatically normalized geometric distances. The theory uses labels −1/+1; displayed labels 0/1 are recoded internally.

@@ -1,0 +1,17 @@
+## The idea
+
+A random forest combines bootstrap samples with random feature subsets at each split. Restricting candidate features can reduce correlation between trees. The final classifier averages class probabilities.
+
+## The mathematics
+
+$$
+\hat p(y=k\mid x)=\frac1T\sum_{t=1}^T\hat p_t(y=k\mid x)
+$$
+
+## Try this experiment
+
+Use the same seed and depth as the Bagging lesson. Switch candidate features from two to one. This two-dimensional example exposes the mechanism; higher-dimensional data can show richer effects.
+
+## Know the limits
+
+A finite forest of axis-aligned trees remains piecewise constant. More trees reduce Monte Carlo variability, not every source of error. Correlated features complicate importance interpretation.

@@ -1,0 +1,17 @@
+## The idea
+
+The E-step computes posterior responsibilities using the current parameters. The M-step updates weights, means and covariances using these responsibilities. Unlike K-means, each point can partially belong to several components. The chart blends colors according to these probabilities.
+
+## The mathematics
+
+$$
+\gamma_{ik}=\frac{\pi_k\mathcal N(x_i\mid\mu_k,\Sigma_k)}{\sum_j\pi_j\mathcal N(x_i\mid\mu_j,\Sigma_j)}
+$$
+
+## Try this experiment
+
+Move through completed EM iterations and inspect the observed log-likelihood. Change the initialization seed and fitted component count. The generated data has three groups even when you fit a different number.
+
+## Know the limits
+
+Exact EM does not decrease the likelihood, but does not guarantee a global optimum. Gaussian mixtures can become singular; this implementation floors covariance eigenvalues. Numerical safeguards mean tiny likelihood changes should be interpreted with tolerance.

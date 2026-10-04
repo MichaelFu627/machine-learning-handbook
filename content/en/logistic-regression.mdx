@@ -1,0 +1,17 @@
+## The idea
+
+Logistic regression models log-odds as a linear function. Sigmoid maps the score to a number between zero and one. Fitting minimizes binary cross-entropy plus an optional regularizer. This laboratory uses gradient descent with an L2 penalty on weights, not the intercept.
+
+## The mathematics
+
+$$
+p(y=1\mid x)=\sigma(w^Tx+b)=\frac{1}{1+e^{-(w^Tx+b)}}
+$$
+
+## Try this experiment
+
+Lower the threshold without retraining. Observe how recall and false positives change. Then add data overlap while keeping the seed fixed. The outlined points belong to the held-out validation set.
+
+## Know the limits
+
+A probability is not a guarantee. A threshold of 0.5 is a convention, not a universal optimum. A straight boundary can fail on curved patterns, and regularization does not repair the wrong model family.

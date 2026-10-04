@@ -1,0 +1,17 @@
+## The idea
+
+K-means alternates two operations. Assign each point to its nearest center. Then replace each center by the mean of its assigned points. With fixed assignments, the mean minimizes squared distance. Initialization matters because the objective is not jointly convex.
+
+## The mathematics
+
+$$
+\min_{c,\mu}\sum_i\|x_i-\mu_{c_i}\|^2
+$$
+
+## Try this experiment
+
+Step through assignment and update separately. Watch the centers and within-cluster sum of squares. Change K while keeping the data seed fixed. Drag a point, then restart the same initialization.
+
+## Know the limits
+
+K is a modeling choice, not a discovered truth. Increasing K cannot increase the globally optimal training objective, but different local solutions can complicate a single run. Distance depends on feature scale; elongated or uneven-density groups may fit poorly.

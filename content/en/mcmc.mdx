@@ -1,0 +1,17 @@
+## The idea
+
+Metropolis-Hastings constructs transitions that preserve the target distribution. A symmetric Gaussian proposal makes the q terms cancel. A rejected proposal repeats the current state; do not drop these repetitions. The example target is 0.3 N(−2,0.8²)+0.7 N(2,0.8²).
+
+## The mathematics
+
+$$
+\alpha=\min\left(1,\frac{\tilde p(x^\prime)q(x\mid x^\prime)}{\tilde p(x)q(x^\prime\mid x)}\right)
+$$
+
+## Try this experiment
+
+Compare small and large proposal scales using trace, histogram, acceptance and autocorrelation. The retained count is always positive. Repeat with new seeds; a plausible histogram from one short chain is not proof of convergence.
+
+## Know the limits
+
+High acceptance can coexist with very slow exploration. Burn-in is not a guarantee of stationarity. The displayed single-chain ESS is a truncated autocorrelation estimate, not a convergence certificate; a serious analysis also checks multiple dispersed chains.

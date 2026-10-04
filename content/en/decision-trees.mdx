@@ -1,0 +1,17 @@
+## The idea
+
+A classification tree chooses a feature and threshold that reduce weighted child impurity. It repeats this operation recursively. Depth limits how many questions a path can ask. Axis-aligned splits make piecewise-constant predictions.
+
+## The mathematics
+
+$$
+G(D)=1-\sum_k p_k^2,\quad\Delta G=G(D)-\frac{n_L}{n}G(D_L)-\frac{n_R}{n}G(D_R)
+$$
+
+## Try this experiment
+
+Increase depth on noisy moons. Compare training and validation accuracy, rather than judging only the complexity of the picture. Repeat with a new seed to see whether a conclusion is stable.
+
+## Know the limits
+
+Limiting depth is pre-pruning; cost-complexity post-pruning is another procedure. A deep tree can fit noise. Feature importance from a tree does not establish causality.

@@ -1,0 +1,17 @@
+## The idea
+
+Gaussian Naive Bayes estimates a mean and variance for every feature in every class. The naive assumption is conditional independence of features given the class. The resulting class scores combine log priors and log likelihoods.
+
+## The mathematics
+
+$$
+P(y=k\mid x)\propto P(y=k)\prod_j P(x_j\mid y=k)
+$$
+
+## Try this experiment
+
+Compare linear, moon, and circle datasets. Ask whether independent per-feature Gaussian distributions describe each class. Change variance smoothing and inspect validation performance.
+
+## Know the limits
+
+Conditional independence is not unconditional independence. Gaussian NB is one variant; count and binary data often motivate Multinomial or Bernoulli NB. Accurate class labels do not guarantee calibrated probabilities.
