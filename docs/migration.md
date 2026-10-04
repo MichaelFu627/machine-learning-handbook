@@ -43,6 +43,6 @@
 - 桌面及手机截图已检查；旧版首页与 12 个页面完成启动检查，旧版 GMM / Poisson EM 和 MCMC 完成运行检查。
 - 一键开发启动已验证：网页和 Python 健康检查均返回成功，退出时两个服务正常关闭。
 
-已添加 GitHub Actions 工作流，但尚未在远端执行；以上结果来自本地环境。
+上述本地验证之后，已将源码发布到 [公开 GitHub 仓库](https://github.com/MichaelFu627/machine-learning-handbook)。代码基线 `eb3408e` 的 [GitHub Actions](https://github.com/MichaelFu627/machine-learning-handbook/actions/runs/37179236314) 也已在干净的 Linux 环境通过依赖安装、数值测试、生产构建与浏览器检查。后续开发以 [GOAL.md](../GOAL.md) 为准。
 
 框架构建、测试和本地浏览器通过不代表真实全球负载已经验证。生产部署前还需根据实际访问地区、流量、服务器资源测量首屏与计算服务延迟。

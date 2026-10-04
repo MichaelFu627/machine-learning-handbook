@@ -26,7 +26,7 @@
 - [x] FastAPI 受限算法接口、参数上限与可恢复的服务错误提示。
 - [x] 保留 Streamlit 旧版与长篇推导，修复已确认的数学和依赖兼容问题。
 - [x] 本地通过 6 项 TypeScript、20 项 Python、7 项浏览器测试；生产构建、类型和格式检查通过。
-- [x] 添加 GitHub Actions 工作流。远端运行结果另行记录，不以本地结果代替。
+- [x] 添加 GitHub Actions 工作流，并在干净的 GitHub Linux 环境通过安装、数值测试、生产构建与浏览器测试；见第 7 节运行记录。
 
 ### 课程现状与剩余深度
 
@@ -66,12 +66,12 @@
 
 执行顺序：**M0 → M1 → M2 → M3 → M4**。允许为当前阶段解除依赖而提前做小项；不因热门技术跳过基础教学。
 
-### M0 — 发布可复现的项目基线（当前交付）
+### M0 — 发布可复现的项目基线（已完成）
 
 - [x] 写明真实实现范围、缺口、阶段目标和验收标准。
 - [x] 将本文件接入 README 与 AGENTS.md，成为后续工作的默认入口。
-- [ ] 在独立项目 Git 仓库提交源码，推送到公开 GitHub 仓库。
-- [ ] 核验远端可见性、提交与 GitHub Actions 结果，并记录仓库地址。
+- [x] 在独立项目 Git 仓库提交源码，推送到公开 GitHub 仓库。
+- [x] 核验远端可见性、提交与 GitHub Actions 结果，并记录仓库地址。
 
 ### M1 — 补齐基础与开发体验（紧接着做）
 
@@ -153,5 +153,7 @@
 |---|---|---|
 | 2026-10-04 | 0.2.0 架构迁移与 14 课双语基线 | [实施记录](docs/migration.md)；本地 33 项自动测试通过 |
 | 2026-10-04 | 建立长期目标与执行约定 | 本文件、AGENTS.md、README |
+| 2026-10-04 | 公开发布项目源码 | [GitHub 仓库](https://github.com/MichaelFu627/machine-learning-handbook)，`main` 分支；不包含网站部署 |
+| 2026-10-04 | GitHub Linux 自动化验收通过 | [Actions 运行记录](https://github.com/MichaelFu627/machine-learning-handbook/actions/runs/37179236314)；代码基线 `eb3408e`；后续状态记录提交仅修改文档 |
 
 相关文档：[启动说明](README.md) · [迁移记录](docs/migration.md) · [最初课程与架构审查](docs/architecture-review.zh-CN.md)。历史审查记录当时状态，当前计划以本文件为准。

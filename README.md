@@ -4,6 +4,8 @@ A bilingual, interactive introduction to statistics and machine learning. The re
 
 **Project goals and roadmap:** [GOAL.md](GOAL.md) is the source of truth for implemented features, remaining gaps, ordered milestones and acceptance criteria. Future work follows that plan unless the user changes direction. The next milestone strengthens foundational teaching and local startup reliability; v1.0 targets a publicly accessible, bilingual core curriculum. Cloud accounts and advanced topics follow later.
 
+**Public repository:** [MichaelFu627/machine-learning-handbook](https://github.com/MichaelFu627/machine-learning-handbook). Source publication is complete; a hosted teaching website is still on the roadmap.
+
 ## Run locally
 
 Use Node.js 22+ (Next.js requires at least 20.9) and Python 3.11+. Commands below run from this directory.
